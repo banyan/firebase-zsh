@@ -39,7 +39,7 @@ function firebase_project() {
 		# fb:[project]
 		elif [[ $1 == 'prefix-square' ]]
 		then
-			local str=%{$color%}"fb:[$project_id]"%{$reset_color%}
+			local str=%{$color%}"[fb:$project_id]"%{$reset_color%}
 			echo "$str "
 
 		# (project)
