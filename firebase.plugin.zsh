@@ -40,19 +40,19 @@ function firebase_project() {
 		elif [[ $1 == 'prefix-square' ]]
 		then
 			local str=%{$color%}"[fb:$project_id]"%{$reset_color%}
-			echo "$str "
+			echo "$str"
 
 		# (project)
-		else 			
+		else
 			local str=%{$color%}"($project_id)"%{$reset_color%}
-			echo "$str "
+			echo "$str"
 		fi
 	fi
 }
 
 function get_firebase_project() {
 	if [[ $(is_firebase_project) ]]
-	then		
+	then
 		# Check the global firebase config file as priority
 		local config_project_id=$(get_config_project_id)
 		if [[ -n $config_project_id ]]
@@ -64,7 +64,7 @@ function get_firebase_project() {
 			local firebaserc_project_id=$(get_rc_project_id "default")
 			echo "$firebaserc_project_id"
 		fi
-	fi	
+	fi
 }
 
 function is_firebase_project() {
@@ -77,7 +77,7 @@ function is_firebase_project() {
 
 function get_firebase_dir() {
 	local dir="$(pwd)"
-	
+
 	# Keep checking up, we may be in a subdir
 	while [[ $dir != '/' ]]
 	do
