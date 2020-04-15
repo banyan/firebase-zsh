@@ -16,25 +16,25 @@ function firebase_project() {
 		if [[ $1 == 'plain' ]]
 		then
 			local str=%{$color%}"$project_id"%{$reset_color%}
-			echo "$str "
+			echo "$str"
 
 		# [project]
 		elif [[ $1 == 'square' ]]
 		then
-			local str=%{$color%}"[$project_id]"%{$reset_color%}			
-			echo "$str "
+			local str=%{$color%}"[$project_id]"%{$reset_color%}
+			echo "$str"
 
 		# fb:project
 		elif [[ $1 == 'prefix' ]]
 		then
 			local str=%{$color%}"fb:$project_id"%{$reset_color%}
-			echo "$str "
+			echo "$str"
 
 		# fb:(project)
 		elif [[ $1 == 'prefix-round' ]]
 		then
 			local str=%{$color%}"fb:($project_id)"%{$reset_color%}
-			echo "$str "
+			echo "$str"
 
 		# fb:[project]
 		elif [[ $1 == 'prefix-square' ]]
